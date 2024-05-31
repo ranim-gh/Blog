@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 40px;
+  background: #c19d9d;
+}
+
+.header {
+  padding: 4px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+
+}
+
+.leftcolumn {   
+  float: left;
+  width: 100%;
+  
+}
+
+.card {
+   background-color: white;
+   padding: 20px; /* Adjusted padding */
+   margin-top: 20px;
+   font-size: 40px;
+   text-align: left; /* Ensure text is left-aligned */
+   border-radius: 25px;
+
+}
+
+.card p,
+.card h2,
+.card h3,
+.card h6
+{
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.card p
+{
+    font-size: 40px;
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Ranim's Blog</h2>
+</div>
+
+<div class="card">
+  <h5 style="margin: 0;">{{post.title}}  <span style = " font-size:40% ; margin: 0;"> <i>posted on {{post.time}}</i></span> </h5>
+    </br>
+  <p style = " font-size:50% ; margin: 0;">{{post.body}}</p>
+
+</div>
+
+</body>
+</html>
+

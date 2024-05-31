@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 40px;
+  background: #c19d9d;
+}
+
+.header {
+  padding: 4px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+  border-radius: 25px;
+
+}
+
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+   border-radius: 25px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Ranim's Blog</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <a style = "text-decoration: none; color:rgb(15, 10, 4)" ; href="/new">
+    <div class="card">
+      <h2> Create a new post ...</h2>
+      
+      
+
+    
+    
+  </div>
+  </a>
+    {% for post in posts %}
+   <a style = "text-decoration: none; color:rgb(15, 10, 4)" ; href="/post/{{post.id}}">
+    <div class="card">
+     
+        <h2>{{post.title}}</h2>
+        <h5>{{post.time}}</h5>
+        <p>{{post.body}}</p>
+
+      
+      
+    </div>
+    {% endfor %}
+    </a>
+
+    
+  </div>
+</div>
+
+</body>
+</html>
