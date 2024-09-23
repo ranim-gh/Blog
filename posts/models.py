@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+from datetime import date
+
 
 
 
@@ -10,6 +12,5 @@ class Post(models.Model):
     
     body =  models.CharField(max_length=100000)
 
-    time = models.TimeField(default=datetime.now, blank= True )
-
+    time = models.DateTimeField(default=datetime.now, blank=True)
     
